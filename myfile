@@ -8,3 +8,5 @@ if [ "$USAGE" -gt "$THRESHOLD" ]; then
 else  
   echo "Disk usage is under control: ${USAGE}%"  
 fi
+
+-- NOW I HAVE FINISHED MY WORK
