@@ -1,5 +1,10 @@
-this is myfile and first line of mumbai side
-today is rakhabandhan 
- Naman is trying to write something ot myfile 
+#!/bin/bash  
 
-Now try to write kapil something to myfile
+THRESHOLD=80  
+USAGE=$(df / | grep / | awk '{ print $5 }' | sed 's/%//g')  
+
+if [ "$USAGE" -gt "$THRESHOLD" ]; then  
+  echo "Disk usage is above threshold: ${USAGE}%"  
+else  
+  echo "Disk usage is under control: ${USAGE}%"  
+fi
